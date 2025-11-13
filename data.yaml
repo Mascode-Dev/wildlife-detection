@@ -1,0 +1,5 @@
+names: ['Pandas', 'RedPandas', 'MartesFlavigula', 'MacacaThibetana', 'RhinopithecusRoxellana', 'HystrixBrachyura', 'SusScrofa', 'RusaUnicolor', 'ElaphodusCephalophus', 'CapricornisMilneedwardsii', 'PseudoisNayaur']
+nc: 11
+train: images/train
+val: images/val
+test: images/test
