@@ -136,7 +136,7 @@ def update_output(contents, filename, date):
     else:
         # No detection
         encoded_image = content_string # Display original image
-        detected_animals.append({'name': "Aucune espèce animale détectée.", 'conf': 0})
+        detected_animals.append({'name': "No animal species detected.", 'conf': 0})
         
     
     # --- 4. Formatting for Display ---

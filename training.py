@@ -1,19 +1,18 @@
 from ultralytics import YOLO
 
-# 1. Charger le modèle pré-entraîné (Transfer Learning)
-# C'est la base qui a déjà appris les formes générales.
+# 1. Load the pre-trained YOLOv8 model
 model = YOLO('yolov8s.pt') 
 
 
 if __name__ == "__main__":
-    # 2. Lancer l'entraînement
+    # 2. Start training with custom dataset
     results = model.train(
-        data='data.yaml',      # Fichier de configuration des données
-        epochs=100,            # Nombre d'époques (ajustez si besoin)
-        imgsz=640,             # Taille des images d'entrée (640x640)
-        batch=-1,              # Batch size automatique
-        name='wildlife_detection_v1', # Nom de la session
-        patience=50            # Arrêter si pas d'amélioration sur 50 époques (évite l'overfitting)
+        data='data.yaml',      # Data configuration file
+        epochs=100,            # Number of epochs (adjust if needed)
+        imgsz=640,             # Input image size (640x640)
+        batch=-1,              # Automatic batch size
+        name='wildlife_detection_v1', # Session name
+        patience=50            # Stop if no improvement for 50 epochs (prevents overfitting)
     )
 
-    print("Entraînement terminé. Résultats sauvegardés dans runs/detect/wildlife_detection_v1")
+    print("Training completed. Results saved in runs/detect/wildlife_detection_v1")
